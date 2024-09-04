@@ -1,0 +1,395 @@
+/* Font mặc định cho toàn bộ body, header và footer */
+body, header, footer {
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Màu nền cho header và footer */
+header {
+    background-color: #ffffff; /* Header và Footer có nền trắng */
+}
+
+.header-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem; /* Hoặc điều chỉnh theo kích thước bạn muốn */
+    color: #ff8578; /* Màu chữ */
+    text-align: left; /* Căn trái tiêu đề */
+    margin: 0; /* Đảm bảo không có margin mặc định */
+}
+
+/* Ngày hiện tại căn phải với màu chữ và kiểu dáng */
+.current-date {
+    font-size: 1.2rem;
+    color: #ff8578;
+}
+
+/* Flex container cho header để căn chỉnh các phần tử */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 1.5rem;
+    }
+
+    .current-date {
+        font-size: 1rem;
+    }
+}
+
+footer {
+    background-color: #ff8578; /* Header và Footer có nền trắng */
+}
+
+
+/* Menu điều hướng */
+.bg-menu {
+    background-color: #ff8578; /* Màu nền menu */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff; /* Màu chữ menu */
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #ffffff; /* Nền trắng khi hover */
+    color: #ff8578; /* Màu chữ #ff8578 khi hover */
+    border-radius: 5px;
+}
+
+/* Khung viền giữa các menu */
+.nav-item + .nav-item {
+    border-left: 2px solid rgba(255, 133, 120, 0.5);
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Slide Gallery */
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Style cho phần về chúng tôi */
+#about {
+    background-color: #f9f9f9; /* Màu nền nhẹ để nổi bật */
+}
+
+.about-box {
+    max-width: 300px;
+    width: 100%;
+}
+
+.avatar img {
+    width: 120px;
+    height: 120px;
+}
+
+.heart img {
+    width: 60px;
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-box {
+        max-width: 90%;
+    }
+
+    .avatar img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .heart img {
+        width: 50px;
+    }
+}
+
+
+.heart img {
+    width: 120px;
+    height: 120px;
+}
+
+/* Avatar hình tròn */
+.avatar img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid #ff8578;
+}
+
+/* Tiêu đề section */
+#ourday h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff8578;
+    margin-bottom: 1rem;
+}
+
+#ourday p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Countdown Timer */
+#countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Đảm bảo các phần tử không bị tràn ra ngoài khung */
+}
+
+/* Các phần tử countdown */
+.countdown-item {
+    background-color: #ff8578; /* Đặt màu nền thành #ff8578 */
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid #ff8578; /* Đặt màu viền để phù hợp với màu nền */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem;
+    flex: 1 1 20%; /* Chiếm 20% chiều rộng để căn chỉnh nhiều phần tử trên một hàng */
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff; /* Đặt màu chữ thành trắng để nổi bật trên nền màu #ff8578 */
+}
+
+.countdown-item p {
+    font-size: 1rem;
+    color: #fff; /* Đặt màu chữ thành trắng để nổi bật trên nền màu #ff8578 */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .countdown-item {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+
+    .countdown-item span {
+        font-size: 2rem;
+    }
+
+    .countdown-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .countdown-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .countdown-item span {
+        font-size: 1.8rem;
+    }
+
+    .countdown-item p {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Bộ sưu tập ảnh */
+#gallery .owl-carousel .item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+.footer-text {
+    color: #f9f9f9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-box {
+        max-width: 100%;
+    }
+
+    .heart {
+        margin: 20px 0;
+    }
+}
+
+
+/* Section địa điểm tổ chức */
+.location {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.location h3 {
+    color: #ff8578;
+}
+
+.location p {
+    margin-bottom: 0.5rem;
+}
+
+.location .btn-primary {
+    background-color: #ff8578;
+    border: none;
+}
+
+.location .btn-primary:hover {
+    background-color: #e76f6f;
+}
+
+/* Tiêu đề section */
+#story .section-title {
+    font-family: 'Dancing Script', cursive;
+    color: #ff8578;
+    margin-bottom: 1rem;
+}
+
+/* Dấu mốc */
+.milestone {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 120px; /* Để đảm bảo khoảng cách cho đường kẻ thời gian */
+}
+
+/* Đường vạch thời gian */
+.milestone::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 60px; /* Vị trí bắt đầu của đường kẻ thời gian */
+    width: 2px;
+    height: 100%;
+    background-color: #ff8578;
+    z-index: 0; /* Để đường kẻ ở phía sau nội dung */
+}
+
+/* Thời gian cụ thể */
+.milestone-timeline {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px; /* Chiều rộng cố định cho vạch thời gian */
+    text-align: center;
+    z-index: 1; /* Để thời gian cụ thể nằm trên đường kẻ */
+}
+
+.milestone-date {
+    background-color: #ff8578;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 1rem;
+    z-index: 2; /* Để ngày tháng nổi bật hơn */
+}
+
+.milestone-heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #ff8578;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* Để trái tim nằm trên đường kẻ */
+}
+
+/* Nội dung dấu mốc */
+.milestone-content {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.milestone-text {
+    flex: 1;
+}
+
+.milestone-image {
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.milestone-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .milestone {
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .milestone::before {
+        left: 0;
+        width: 2px;
+    }
+
+    .milestone-timeline {
+        position: static;
+        width: 100%;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    .milestone-heart {
+        display: none; /* Ẩn trái tim để tránh làm rối bố cục trên màn hình nhỏ */
+    }
+
+    .milestone-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .milestone-image {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .milestone-date {
+        width: auto;
+        height: auto;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .milestone-image img {
+        width: 100%;
+    }
+}
+
