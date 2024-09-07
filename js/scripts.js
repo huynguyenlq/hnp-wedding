@@ -1,8 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // Đếm ngược đến ngày tổ chức sự kiện (22.9.2024)
     var countDownDate = new Date("Sep 22, 2024 00:00:00").getTime();
 
-    var countdownfunction = setInterval(function() {
+    var countdownfunction = setInterval(function () {
         var now = new Date().getTime();
         var distance = countDownDate - now;
 
@@ -23,13 +23,13 @@ $(document).ready(function() {
     }, 1000);
 
     // Cuộn trang xuống khi click vào mục "Ngày của chúng tôi"
-    $('a.nav-link').on('click', function(event) {
+    $('a.nav-link').on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
-            }, 800, function(){
+            }, 800, function () {
                 window.location.hash = hash;
             });
         }
@@ -42,7 +42,7 @@ $(document).ready(function() {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     function formatDate(date) {
         const daysOfWeek = ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"];
         const monthsOfYear = ["tháng 1", "tháng 2", "tháng 3", "tháng 4", "tháng 5", "tháng 6", "tháng 7", "tháng 8", "tháng 9", "tháng 10", "tháng 11", "tháng 12"];
@@ -59,4 +59,27 @@ document.addEventListener("DOMContentLoaded", function() {
     var today = new Date();
     var formattedDate = formatDate(today);
     currentDateElement.textContent = formattedDate;
+
+    // Khi người dùng cuộn trang 100px, hiển thị nút "Back to Top"
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        var backToTopButton = document.getElementById("backToTop");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    }
+
+    // Khi người dùng nhấp vào nút, cuộn về đầu trang
+    document.getElementById("backToTop").addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
 });
+

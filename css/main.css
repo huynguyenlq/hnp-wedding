@@ -11,7 +11,7 @@ header {
 .header-title {
     font-family: 'Dancing Script', cursive;
     font-size: 2rem; /* Hoặc điều chỉnh theo kích thước bạn muốn */
-    color: #ff8578; /* Màu chữ */
+    color: #f8b6b1; /* Màu chữ */
     text-align: left; /* Căn trái tiêu đề */
     margin: 0; /* Đảm bảo không có margin mặc định */
 }
@@ -19,7 +19,7 @@ header {
 /* Ngày hiện tại căn phải với màu chữ và kiểu dáng */
 .current-date {
     font-size: 1.2rem;
-    color: #ff8578;
+    color: #f8b6b1;
 }
 
 /* Flex container cho header để căn chỉnh các phần tử */
@@ -41,13 +41,13 @@ header .container {
 }
 
 footer {
-    background-color: #ff8578; /* Header và Footer có nền trắng */
+    background-color: #f8b6b1; /* Header và Footer có nền trắng */
 }
 
 
 /* Menu điều hướng */
 .bg-menu {
-    background-color: #ff8578; /* Màu nền menu */
+    background-color: #f8b6b1; /* Màu nền menu */
 }
 
 .navbar-nav .nav-link {
@@ -58,7 +58,7 @@ footer {
 
 .navbar-nav .nav-link:hover {
     background-color: #ffffff; /* Nền trắng khi hover */
-    color: #ff8578; /* Màu chữ #ff8578 khi hover */
+    color: #f8b6b1; /* Màu chữ #f8b6b1 khi hover */
     border-radius: 5px;
 }
 
@@ -78,60 +78,64 @@ footer {
     object-fit: cover;
 }
 
-/* Style cho phần về chúng tôi */
-#about {
-    background-color: #f9f9f9; /* Màu nền nhẹ để nổi bật */
-}
-
-.about-box {
-    max-width: 300px;
+#about .about-box {
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     width: 100%;
-}
-
-.avatar img {
-    width: 120px;
-    height: 120px;
-}
-
-.heart img {
-    width: 60px;
-    height: auto;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .about-box {
-        max-width: 90%;
+    max-width: 400px;
+  }
+  
+  #about .avatar img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  #about .details {
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  #about .details p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
+  #about h3 {
+    color: #f8b6b1;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #about p.text-center {
+    color: #6c757d;
+    font-size: 18px;
+  }
+  
+  .heart img {
+    width: 100px;
+  }
+  
+  @media (max-width: 768px) {
+    #about .container {
+      flex-direction: column;
     }
-
-    .avatar img {
-        width: 100px;
-        height: 100px;
+  
+    #about .about-box {
+      width: 100%;
+      max-width: none;
+      margin-bottom: 20px;
     }
-
+  
     .heart img {
-        width: 50px;
+      width: 80px;
     }
-}
-
-
-.heart img {
-    width: 120px;
-    height: 120px;
-}
-
-/* Avatar hình tròn */
-.avatar img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border: 3px solid #ff8578;
-}
+  }  
 
 /* Tiêu đề section */
 #ourday h2 {
     font-family: 'Dancing Script', cursive;
-    color: #ff8578;
+    color: #f8b6b1;
     margin-bottom: 1rem;
 }
 
@@ -151,10 +155,10 @@ footer {
 
 /* Các phần tử countdown */
 .countdown-item {
-    background-color: #ff8578; /* Đặt màu nền thành #ff8578 */
+    background-color: #f8b6b1; /* Đặt màu nền thành #f8b6b1 */
     padding: 1rem;
     border-radius: 8px;
-    border: 2px solid #ff8578; /* Đặt màu viền để phù hợp với màu nền */
+    border: 2px solid #f8b6b1; /* Đặt màu viền để phù hợp với màu nền */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0.5rem;
@@ -165,12 +169,12 @@ footer {
     display: block;
     font-size: 2.5rem;
     font-weight: bold;
-    color: #fff; /* Đặt màu chữ thành trắng để nổi bật trên nền màu #ff8578 */
+    color: #fff; /* Đặt màu chữ thành trắng để nổi bật trên nền màu #f8b6b1 */
 }
 
 .countdown-item p {
     font-size: 1rem;
-    color: #fff; /* Đặt màu chữ thành trắng để nổi bật trên nền màu #ff8578 */
+    color: #fff; /* Đặt màu chữ thành trắng để nổi bật trên nền màu #f8b6b1 */
 }
 
 
@@ -241,7 +245,7 @@ footer {
 }
 
 .location h3 {
-    color: #ff8578;
+    color: #f8b6b1;
 }
 
 .location p {
@@ -249,7 +253,7 @@ footer {
 }
 
 .location .btn-primary {
-    background-color: #ff8578;
+    background-color: #f8b6b1;
     border: none;
 }
 
@@ -260,7 +264,7 @@ footer {
 /* Tiêu đề section */
 #story .section-title {
     font-family: 'Dancing Script', cursive;
-    color: #ff8578;
+    color: #f8b6b1;
     margin-bottom: 1rem;
 }
 
@@ -279,7 +283,7 @@ footer {
     left: 60px; /* Vị trí bắt đầu của đường kẻ thời gian */
     width: 2px;
     height: 100%;
-    background-color: #ff8578;
+    background-color: #f8b6b1;
     z-index: 0; /* Để đường kẻ ở phía sau nội dung */
 }
 
@@ -295,7 +299,7 @@ footer {
 }
 
 .milestone-date {
-    background-color: #ff8578;
+    background-color: #f8b6b1;
     color: #fff;
     padding: 0.5rem;
     border-radius: 50%;
@@ -313,7 +317,7 @@ footer {
     left: 50%;
     width: 10px;
     height: 10px;
-    background-color: #ff8578;
+    background-color: #f8b6b1;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     z-index: 3; /* Để trái tim nằm trên đường kẻ */
@@ -390,6 +394,65 @@ footer {
 
     .milestone-image img {
         width: 100%;
+    }
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px; /* Cách đáy 20px */
+    right: 20px; /* Cách phải 20px */
+    width: 50px; /* Đặt chiều rộng của nút */
+    height: 50px; /* Đặt chiều cao của nút */
+    border-radius: 50%; /* Bo tròn các góc để tạo hình tròn */
+    background-color: #ff8578; /* Màu nền của nút */
+    color: white; /* Màu chữ */
+    border: none; /* Loại bỏ viền */
+    cursor: pointer; /* Con trỏ thay đổi khi hover */
+    display: none; /* Ẩn nút ban đầu */
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Kích thước biểu tượng mũi tên */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    z-index: 1000; /* Đảm bảo nút hiển thị trên các phần tử khác */
+    transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #e76f6f; /* Đổi màu khi hover */
+}
+
+#backToTop:focus {
+    outline: none; /* Loại bỏ đường viền khi được chọn */
+}
+
+
+.half-avatar {
+    width: 150px; /* Chiều rộng của ảnh */
+    height: 150px; /* Chiều cao của ảnh */
+    object-fit: cover; /* Đảm bảo ảnh phù hợp với kích thước khung */
+    object-position: top; /* Chỉ hiển thị phần trên của ảnh, tập trung vào khuôn mặt */
+    border-radius: 50% !important /* Giữ cho ảnh bo tròn */
+}
+
+.carousel-image {
+    height: 900px !important; /* Điều chỉnh chiều cao tùy ý */
+    object-fit: cover !important; /* Đảm bảo ảnh không bị méo */
+    object-position: 80% top; /* Tập trung vào 80% phần bên phải của ảnh */
+    width: 100% !important; /* Ensure image width spans full width */
+}
+
+
+@media (max-width: 768px) {
+    .carousel-image {
+        height: 400px !important; /* Adjust height for tablet devices */
+        object-position: top !important; /* Focus center for smaller screens to avoid cutting off important parts */
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-image {
+        height: 300px !important; /* Adjust height for mobile devices */
+        object-position: top !important; /* Center for smaller screens */
     }
 }
 

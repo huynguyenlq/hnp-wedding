@@ -16,6 +16,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
   <script src="js/scripts.js"></script>
 </head>
 
@@ -34,12 +35,10 @@
     </div>
   </header>
 
-
-
   <!-- Menu điều hướng -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-menu">
     <div class="container">
-      <a class="navbar-brand" href="#">Menu</a>
+      <a class="navbar-brand" href="#"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -53,10 +52,10 @@
             <a class="nav-link" href="#ourday">Ngày của chúng tôi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#story">Câu chuyện của chúng tôi</a>
+            <a class="nav-link" href="#locations">Địa điểm</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#location">Địa điểm</a>
+            <a class="nav-link" href="#guest-wishes">Gửi Lời Chúc</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#gallery">Bộ sưu tập ảnh</a>
@@ -66,55 +65,67 @@
     </div>
   </nav>
 
-
   <!-- Slide Gallery -->
   <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="assets/img/photo1.JPG" class="d-block w-100" alt="Slide 1">
-      </div>
-      <div class="carousel-item">
-        <img src="assets/img/photo2.JPG" class="d-block w-100" alt="Slide 2">
-      </div>
-      <div class="carousel-item">
-        <img src="assets/img/photo3.JPG" class="d-block w-100" alt="Slide 3">
-      </div>
+        <div class="carousel-item active">
+            <img src="assets/img/slide1.JPG" class="d-block w-100 carousel-image" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/img/slide2.JPG" class="d-block w-100 carousel-image" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+            <img src="assets/img/slide3.JPG" class="d-block w-100 carousel-image" alt="Slide 3">
+        </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
     </button>
   </div>
+
 
   <!-- Về chúng tôi -->
   <section id="about" class="my-5 text-center">
     <div class="container d-flex flex-column flex-md-row justify-content-center align-items-center">
       <!-- Thông tin chú rể -->
-      <div class="about-box p-4 rounded border text-center mb-4 mb-md-0">
-        <div class="avatar mb-3">
-          <img src="assets/img/photo1.JPG" alt="Avatar Nam" class="rounded-circle">
+      <div class="about-box p-4 rounded border text-left m-2">
+        <div class="avatar mb-3 text-center">
+          <img src="assets/img/prince.JPG" alt="Avatar Nam" class="rounded-circle half-avatar">
         </div>
-        <h3>Nguyễn Lê Quang Huy</h3>
-        <p>Thông tin về chú rể...</p>
+        <h3 class="text-center">Nguyễn Lê Quang Huy</h3>
+        <p class="text-center">Nhà trai</p>
+        <div class="details">
+          <p><strong>Bố:</strong> Nguyễn Văn Bé</p>
+          <p><strong>Mẹ:</strong> Lê Thị Phương Mai</p>
+          <p><strong>Địa chỉ:</strong> K27/9 Nguyễn Thành Hãn, Đà Nẵng</p>
+        </div>
       </div>
+      
       <!-- Trái tim giữa -->
       <div class="heart my-4 my-md-0 mx-md-4">
         <img src="assets/img/heart.png" alt="Heart" class="img-fluid">
       </div>
+      
       <!-- Thông tin cô dâu -->
-      <div class="about-box p-4 rounded border text-center">
-        <div class="avatar mb-3">
-          <img src="assets/img/photo2.JPG" alt="Avatar Nữ" class="rounded-circle">
+      <div class="about-box p-4 rounded border text-left m-2">
+        <div class="avatar mb-3 text-center">
+          <img src="assets/img/princess.JPG" alt="Avatar Nữ" class="rounded-circle half-avatar">
         </div>
-        <h3>Phạm Thị Phương</h3>
-        <p>Thông tin về cô dâu...</p>
+        <h3 class="text-center">Phạm Thị Phương</h3>
+        <p class="text-center">Nhà gái</p>
+        <div class="details">
+          <p><strong>Bố:</strong> Phạm Văn Cận</p>
+          <p><strong>Mẹ:</strong> Bùi Thị Thơ</p>
+          <p><strong>Địa chỉ:</strong> Xóm 2, Thôn Thọ Sơn, Đông Hưng, Thái Bình</p>
+        </div>
       </div>
     </div>
-  </section>
+  </section>  
 
   <!-- Ngày của chúng tôi -->
   <section id="ourday" class="my-5 text-center">
@@ -144,89 +155,60 @@
     </div>
   </section>
 
-  <!-- Câu chuyện của chúng tôi -->
-  <section id="story" class="py-5">
-    <div class="container">
-      <h2 class="section-title">Câu chuyện của chúng tôi</h2>
-
-      <!-- Dấu mốc 1 -->
-      <div class="milestone">
-        <div class="milestone-timeline">
-          <div class="milestone-date">01/01/2022</div>
-          <div class="milestone-heart"></div>
-        </div>
-        <div class="milestone-content">
-          <div class="milestone-text">
-            <h3>Gặp nhau lần đầu</h3>
-            <p>Vào ngày 1 tháng 1 năm 2022, chúng tôi lần đầu tiên gặp nhau tại một buổi tiệc. Đây là khoảnh khắc quan
-              trọng mở đầu câu chuyện tình yêu của chúng tôi.</p>
-          </div>
-          <div class="milestone-image">
-            <img src="assets/img/photo1.JPG" alt="Gặp nhau lần đầu">
-          </div>
-        </div>
-      </div>
-
-      <!-- Dấu mốc 2 -->
-      <div class="milestone">
-        <div class="milestone-timeline">
-          <div class="milestone-date">15/05/2023</div>
-          <div class="milestone-heart"></div>
-        </div>
-        <div class="milestone-content">
-          <div class="milestone-image">
-            <img src="assets/img/photo2.JPG" alt="Cầu hôn">
-          </div>
-          <div class="milestone-text">
-            <h3>Cầu hôn</h3>
-            <p>Ngày 15 tháng 5 năm 2023, chúng tôi đã tổ chức một buổi tối lãng mạn, nơi tôi cầu hôn và cô ấy đồng ý.
-              Đây là một trong những khoảnh khắc hạnh phúc nhất của chúng tôi.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dấu mốc 3 -->
-      <div class="milestone">
-        <div class="milestone-timeline">
-          <div class="milestone-date">06/2024</div>
-          <div class="milestone-heart"></div>
-        </div>
-        <div class="milestone-content">
-          <div class="milestone-text">
-            <h3>Chuẩn bị cho đám cưới</h3>
-            <p>Chúng tôi bắt đầu chuẩn bị cho đám cưới vào tháng 6 năm 2024. Đây là thời gian đầy hứng khởi và bận rộn
-              để chuẩn bị cho ngày trọng đại của chúng tôi.</p>
-          </div>
-          <div class="milestone-image">
-            <img src="assets/img/photo3.JPG" alt="Chuẩn bị cho đám cưới">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
   <!-- Địa điểm tổ chức -->
   <section id="locations" class="py-5 bg-light">
     <div class="container">
       <h2 class="section-title">Địa điểm tổ chức</h2>
 
-      <!-- Đà Nẵng -->
-      <div class="location">
-        <h3>Đà Nẵng</h3>
-        <p><strong>Ngày tổ chức:</strong> 13.10.2024</p>
-        <p><strong>Thời gian:</strong> 15:00</p>
-        <p><strong>Địa chỉ:</strong> [Địa chỉ chi tiết tại Đà Nẵng]</p>
-        <a href="https://www.google.com/maps" class="btn btn-primary" target="_blank">Xem trên Google Maps</a>
-      </div>
-
       <!-- Thái Bình -->
       <div class="location mt-4">
         <h3>Thái Bình</h3>
-        <p><strong>Ngày tổ chức:</strong> 22.9.2024</p>
-        <p><strong>Thời gian:</strong> 10:00</p>
-        <p><strong>Địa chỉ:</strong> [Địa chỉ chi tiết tại Thái Bình]</p>
-        <a href="https://www.google.com/maps" class="btn btn-primary" target="_blank">Xem trên Google Maps</a>
+        <p><strong>Ngày tổ chức:</strong> 22.09.2024</p>
+        <p><strong>Thời gian:</strong> 09:30</p>
+        <p><strong>Địa chỉ tổ chức:</strong>Xóm 2, Thôn Thọ Sơn, Minh Phú Đông Hưng, Thái Bình</p>
+        <a href="https://maps.app.goo.gl/36rUmDxoDZNM6beG6" class="btn btn-primary" target="_blank">Xem trên Google Maps</a>
+      </div>
+
+      <!-- Đà Nẵng -->
+      <div class="location mt-4">
+        <h3>Đà Nẵng</h3>
+        <p><strong>Ngày tổ chức:</strong> 13.10.2024</p>
+        <p><strong>Thời gian:</strong> 11:00</p>
+        <p><strong>Địa điểm tổ chức:</strong>Nhà hàng Golden Phoenix sảnh A. <br>A8.2 Lô 1,2 Khu Công Viên Bắc Tượng Đài Đường 2/9 Q. Hải Châu, TP. Đà Nẵng</p>
+        <a href="https://maps.app.goo.gl/WqHD5UD7GKoaie568" class="btn btn-primary" target="_blank">Xem trên Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gửi lời chúc -->
+  <section id="guest-wishes" class="py-5 text-center">
+    <div class="container">
+      <h2 class="section-title">Gửi Lời Chúc Đến Chúng Tôi</h2>
+      <p>Chúng tôi sẽ rất vui khi nhận được những lời chúc tốt đẹp từ bạn.</p>
+      
+      <div class="row justify-content-center">
+        <!-- Form lời chúc -->
+        <div class="col-lg-6 col-md-8">
+          <form id="wishes-form" class="wishes-form">
+            <div class="form-group mb-3">
+              <label for="name">Họ và Tên</label>
+              <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên" required>
+            </div>
+            <div class="form-group mb-3">
+              <label for="message">Lời Chúc</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Nhập lời chúc" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Gửi</button>
+          </form>
+        </div>
+
+        <!-- QR Code ngân hàng -->
+        <div class="col-lg-4 col-md-4 d-flex align-items-center justify-content-center">
+          <div class="qr-code">
+            <img src="assets/img/QR.png" alt="QR Code Ngân Hàng" class="img-fluid" style="width: 240px; height: 240px;">
+            <p class="mt-3">Quét mã QR để gửi quà mừng</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -235,25 +217,51 @@
   <section id="gallery" class="my-5 text-center">
     <div class="container">
       <h2>Bộ Sưu Tập Ảnh</h2>
-      <div class="row">
+      <div class="row m-2 d-flex justify-content-between align-items-center">
         <!-- Thêm các hình ảnh vào đây -->
-        <div class="col-md-4">
+        <div class="col-md-3 m-1">
           <img src="assets/img/photo1.jpg" class="img-fluid rounded" alt="Photo 1">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3 m-1">
           <img src="assets/img/photo2.jpg" class="img-fluid rounded" alt="Photo 2">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3 m-1">
           <img src="assets/img/photo3.jpg" class="img-fluid rounded" alt="Photo 3">
+        </div>
+      </div>
+      <div class="row m-2 d-flex justify-content-between align-items-center">
+        <!-- Thêm các hình ảnh vào đây -->
+        <div class="col-md-3 m-1">
+          <img src="assets/img/photo4.jpg" class="img-fluid rounded" alt="Photo 4">
+        </div>
+        <div class="col-md-3 m-1">
+          <img src="assets/img/photo5.jpg" class="img-fluid rounded" alt="Photo 5">
+        </div>
+        <div class="col-md-3 m-1">
+          <img src="assets/img/photo6.jpg" class="img-fluid rounded" alt="Photo 6">
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Nút "Back to Top" -->
+  <button id="backToTop" title="Back to Top">↑</button>
+
+
   <!-- Footer -->
   <footer class="py-4 text-center">
     <div class="container">
-      <p class="text-white">Liên hệ với chúng tôi qua email: example@example.com</p>
+      <div class="row m-1">
+        <div class="col-sm-6 col-md-6 col-xl-6">
+          <p class="text-white">Liên hệ qua SĐT của chúng tôi:</p>
+        </div>
+        <div class="col-sm-3 col-md-3 col-xl-3">
+          <a href="tel:0977577998" class="text-white">Huy Nguyễn: 0977577998</a>
+        </div>
+        <div class="col-sm-3 col-md-3 col-xl-3">
+          <a href="tel:0349654007" class="text-white">Phương Phạm: 0349654007</a>
+        </div>
+      </div>
     </div>
   </footer>
 </body>
